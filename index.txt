@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>311 Games</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<h1>311 Games</h1>
+<div id="game-options">
+  <p>Select a Game:</p>
+  <button onclick="startTicTacToe()">Tic Tac Toe</button>
+  <!-- Add other game buttons here -->
+</div>
+<div id="tic-tac-toe" class="game">
+  <h2>Tic Tac Toe</h2>
+  <div id="choose-player">
+    <p>Choose Player Symbol:</p>
+    <button onclick="chooseX()">X</button>
+    <button onclick="chooseO()">O</button>
+  </div>
+  <div id="difficulty">
+    <p>Choose Difficulty:</p>
+    <button onclick="setDifficulty('easy')">Easy</button>
+    <button onclick="setDifficulty('medium')">Medium</button>
+    <button onclick="setDifficulty('hard')">Hard</button>
+  </div>
+  <button onclick="startGame()">Start Game</button>
+</div>
+<div id="game-container" style="display: none;">
+  <div id="board" class="board">
+    <div class="cell" onclick="handleCellClick(event)"></div>
+    <div class="cell" onclick="handleCellClick(event)"></div>
+    <div class="cell" onclick="handleCellClick(event)"></div>
+    <div class="cell" onclick="handleCellClick(event)"></div>
+    <div class="cell" onclick="handleCellClick(event)"></div>
+    <div class="cell" onclick="handleCellClick(event)"></div>
+    <div class="cell" onclick="handleCellClick(event)"></div>
+    <div class="cell" onclick="handleCellClick(event)"></div>
+    <div class="cell" onclick="handleCellClick(event)"></div>
+  </div>
+  <div id="message">Click on a cell to start the game</div>
+  <div id="scoreboard">Player: 0 AI: 0 Draw: 0</div>
+  <button onclick="newGame()">New Game</button>
+  <button onclick="restartGame()">Restart</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
